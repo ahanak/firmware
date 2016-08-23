@@ -23,3 +23,13 @@ config wifi-iface
     option mode       ap
     option ssid       '${ESSID_AP}'
     option encryption none
+
+config wifi-iface
+    option device 'radio0'
+    option network 'mesh'
+    option ifname 'w2apsec'
+    option mode 'ap'
+    option ssid '${ESSID_AP_ENC}'
+    option encryption 'wpa2'
+    option server '${RADIUS_IP}'
+    option key 'radius'
